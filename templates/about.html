@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us | BuyGenix</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Orbitron:wght@700&family=EB+Garamond:ital,wght@1,500&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background: #0a0c1b;
+      overflow: hidden;
+    }
+    body {
+      min-height: 100vh;
+      width: 100vw;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+      position: relative;
+    }
+    /* BuyGenix info glass box */
+    .buygenix-info {
+      background: rgba(24, 28, 54, 0.62);
+      border-radius: 2.2rem;
+      box-shadow: 0 8px 32px 0 #000a, 0 0 32px 4px #3b82f655;
+      backdrop-filter: blur(18px) saturate(160%);
+      -webkit-backdrop-filter: blur(18px) saturate(160%);
+      border: 2.5px solid rgba(99,102,241,0.18);
+      max-width: 700px;
+      width: 92vw;
+      margin: 3rem auto 2.5rem auto;
+      padding: 2.5rem 2rem 2rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      z-index: 2;
+    }
+    .buygenix-info::before {
+      content: "";
+      position: absolute;
+      inset: -3px;
+      border-radius: 2.4rem;
+      pointer-events: none;
+      border: 2.5px solid transparent;
+      background: linear-gradient(120deg, #3b82f6, #a78bfa, #3b82f6) border-box;
+      opacity: 0.22;
+      z-index: 0;
+      filter: blur(1.5px);
+      animation: neon-border 2.5s infinite alternate;
+    }
+    .buygenix-title {
+      font-family: 'Cinzel', 'Orbitron', serif;
+      font-size: 2.2rem;
+      color: #e0e6ff;
+      letter-spacing: 2px;
+      margin-bottom: 1.1rem;
+      text-shadow: 0 0 18px #7f9cf5, 0 0 40px #3b82f6, 0 0 2px #fff, 0 0 8px #a78bfa;
+      animation: title-glow 2.5s infinite alternate;
+      position: relative;
+      z-index: 2;
+    }
+    .buygenix-desc {
+      font-family: 'EB Garamond', 'Orbitron', serif;
+      color: #b6b9d6;
+      font-size: 1.18rem;
+      letter-spacing: 0.5px;
+      text-shadow: 0 1px 8px #23243a;
+      font-style: italic;
+      margin: 0 auto;
+      max-width: 600px;
+      z-index: 2;
+      position: relative;
+    }
+    @keyframes neon-border {
+      0% { opacity: 0.18; filter: blur(1.5px);}
+      100% { opacity: 0.32; filter: blur(3.5px);}
+    }
+    @keyframes title-glow {
+      0% { text-shadow: 0 0 18px #7f9cf5, 0 0 40px #3b82f6, 0 0 2px #fff, 0 0 8px #a78bfa; }
+      100% { text-shadow: 0 0 32px #a5b4fc, 0 0 60px #6366f1, 0 0 4px #fff, 0 0 16px #a78bfa; }
+    }
+    /* Keep your existing chapter-section and other styles below */
+    .chapter-section {
+      min-height: 100vh;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      scroll-snap-align: start;
+      position: relative;
+      z-index: 1;
+      padding: 0;
+    }
+    .chapter-content {
+      background: rgba(24, 28, 54, 0.62);
+      border-radius: 2rem;
+      box-shadow: 0 8px 32px 0 #000a, 0 0 32px 4px #3b82f655;
+      backdrop-filter: blur(18px) saturate(160%);
+      -webkit-backdrop-filter: blur(18px) saturate(160%);
+      border: 2.5px solid rgba(99,102,241,0.18);
+      max-width: 600px;
+      width: 90vw;
+      padding: 3.5rem 2rem 2.5rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .chapter-content::before {
+      content: "";
+      position: absolute;
+      inset: -3px;
+      border-radius: 2.2rem;
+      pointer-events: none;
+      border: 2.5px solid transparent;
+      background: linear-gradient(120deg, #3b82f6, #a78bfa, #3b82f6) border-box;
+      opacity: 0.22;
+      z-index: 0;
+      filter: blur(1.5px);
+      animation: neon-border 2.5s infinite alternate;
+    }
+    .chapter-title {
+      font-family: 'Cinzel', 'Orbitron', serif;
+      font-size: 2.5rem;
+      color: #e0e6ff;
+      letter-spacing: 2px;
+      margin-bottom: 1.2rem;
+      text-shadow:
+        0 0 18px #7f9cf5,
+        0 0 40px #3b82f6,
+        0 0 2px #fff,
+        0 0 8px #a78bfa;
+      animation: title-glow 2.5s infinite alternate;
+      position: relative;
+      z-index: 2;
+    }
+    .chapter-text {
+      font-family: 'EB Garamond', 'Orbitron', serif;
+      color: #b6b9d6;
+      font-size: 1.25rem;
+      letter-spacing: 0.5px;
+      text-shadow: 0 1px 8px #23243a;
+      font-style: italic;
+      margin: 0 auto;
+      max-width: 500px;
+      z-index: 2;
+      position: relative;
+    }
+    .chapter-sigil {
+      position: absolute;
+      top: 2rem; right: 2rem;
+      width: 60px; height: 60px;
+      z-index: 1;
+      opacity: 0.22;
+      pointer-events: none;
+      background:
+        radial-gradient(circle, #a78bfa 0%, #3b82f6 60%, transparent 100%),
+        repeating-conic-gradient(from 0deg, #3b82f6 0deg 10deg, transparent 10deg 20deg);
+      border-radius: 50%;
+      filter: blur(2px);
+      animation: sigil-spin 8s linear infinite;
+    }
+    @keyframes sigil-spin {
+      0% { transform: rotate(0deg);}
+      100% { transform: rotate(360deg);}
+    }
+    .chapter-number {
+      position: absolute;
+      left: 2rem; top: 2rem;
+      font-family: 'Orbitron', 'Cinzel', serif;
+      font-size: 1.1rem;
+      color: #3b82f6;
+      letter-spacing: 0.2em;
+      text-shadow: 0 0 8px #3b82f6, 0 0 2px #fff;
+      opacity: 0.7;
+      z-index: 2;
+      user-select: none;
+    }
+    @media (max-width: 700px) {
+      .buygenix-info {
+        padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+      }
+      .buygenix-title {
+        font-size: 1.3rem;
+      }
+      .chapter-content {
+        padding: 2rem 0.5rem 1.5rem 0.5rem;
+      }
+      .chapter-title {
+        font-size: 1.4rem;
+      }
+      .chapter-sigil, .chapter-number {
+        top: 1rem; right: 1rem; left: 1rem;
+        width: 36px; height: 36px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="buygenix-info">
+    <div class="buygenix-title">BuyGenix: The Cyberpunk Oracle</div>
+    <div class="buygenix-desc">
+      BuyGenix fuses ancient wisdom and futuristic AI to guide you through the digital marketplace.
+      <br><br>
+      <b>Features:</b>
+      <span style="color:#3b82f6;">Price Tracking</span>,
+      <span style="color:#a78bfa;">AI Forecasting</span>,
+      <span style="color:#3b82f6;">Notifications</span>,
+      <span style="color:#a78bfa;">Dashboard</span>.
+      <br><br>
+      Empower your journey with real-time insights, predictive analytics, and a neon-lit dashboard—where every user is a hero in the saga of BuyGenix.
+    </div>
+  </div>
+  <section class="chapter-section">
+    <div class="chapter-content">
+      <span class="chapter-number">CHAPTER I</span>
+      <div class="chapter-sigil"></div>
+      <h2 class="chapter-title">The Prophecy Awakens</h2>
+      <p class="chapter-text">
+        In the shadowed halls of BuyGenix, ancient codes whisper and neon veins pulse with destiny. Here, the wisdom of forgotten kings merges with the logic of tomorrow’s AI, forging a new legend in the digital age.
+      </p>
+    </div>
+  </section>
+  <section class="chapter-section">
+    <div class="chapter-content">
+      <span class="chapter-number">CHAPTER II</span>
+      <div class="chapter-sigil"></div>
+      <h2 class="chapter-title">Vision of the Throne</h2>
+      <p class="chapter-text">
+        Our vision is a realm where every seeker, guided by the light of artificial prophecy, claims their fortune. The BuyGenix oracle stands sentinel, illuminating the path through the labyrinth of markets with a glow both mystical and precise.
+      </p>
+    </div>
+  </section>
+  <section class="chapter-section">
+    <div class="chapter-content">
+      <span class="chapter-number">CHAPTER III</span>
+      <div class="chapter-sigil"></div>
+      <h2 class="chapter-title">The Mission Unfolds</h2>
+      <p class="chapter-text">
+        We empower the worthy with insights born of data and destiny, uniting the realms of code and legend. Every deal revealed is a step closer to the throne, every user a hero in the saga of BuyGenix.
+      </p>
+    </div>
+  </section>
+</body>
+</html>

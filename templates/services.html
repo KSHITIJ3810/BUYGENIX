@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Services | BuyGenix</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=EB+Garamond:ital,wght@1,500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            min-heightP: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #181c2b 0%, #23243a 60%, #3b82f6 100%);
+            font-family: 'EB Garamond', serif;
+            display: flex;
+            flex-direction: column;
+            align-items; center;
+            justify-content: flex-start;
+            padding: 0;
+        }
+        h1 {
+            font-family: 'Cinzel', serif;
+            color: #e0e6ff;
+            font-size: 2.7rem;
+            margin: 2.5rem 0 1.5rem 0;
+            letter-spacing: 2px;
+            text-shadow: 0 0 18px #7f9cf5, 0 0 40px #3b82f6;
+            text-align: center;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap; 2.2rem;
+            width; 90vw;
+            max-width: 1100px;
+            margin-bottom: 3rem;
+        }
+        .service-card{
+            background: rgba(24, 28, 54, 0.62);
+            border-radius: 1.7rem;
+            box-shadow: 0 8px 32px 0 #000a, 0 0 32px 4px #3b82f655;
+            -webkit-backdrop-filter: blur(18px) saturate(160%);
+            boder: 2.5px solid rgba(99, 102, 241, 0.18);
+            padding; 2.5rem 1.5rem 2rem 1.5rem;
+            text-align; center;
+            position: relative;
+            transition: box-shadow 0.3s, border 0.3s;
+            cursor: pointer;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .service-card:hover, .service-card:focus {
+            box-shadow:
+        0 0 0 0 #fff,
+        0 0 24px 6px #a78bfa,
+        0 0 48px 12px #3b82f6;
+      border: 2.5px solid #3b82f6;
+    }
+    .service-icon {
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .service-title {
+      font-family: 'Cinzel', serif;
+      color: #e0e6ff;
+      font-size: 1.4rem;
+      letter-spacing: 1px;
+      margin-bottom: 0.7rem;
+      text-shadow: 0 0 8px #3b82f6, 0 0 2px #fff;
+    }
+    .service-desc {
+      color: #b6b9d6;
+      font-size: 1.08rem;
+      font-style: italic;
+      letter-spacing: 0.2px;
+      text-shadow: 0 1px 8px #23243a;
+      margin: 0 auto;
+      max-width: 320px;
+    }
+    /* Neon border accent on card */
+    .service-card::before {
+      content: "";
+      position: absolute;
+      inset: -3px;
+      border-radius: 2rem;
+      pointer-events: none;
+      border: 2.5px solid transparent;
+      background: linear-gradient(120deg, #3b82f6, #a78bfa, #3b82f6) border-box;
+      opacity: 0.18;
+      z-index: 0;
+      filter: blur(1.5px);
+      transition: opacity 0.3s;
+    }
+    .service-card:hover::before, .service-card:focus::before {
+      opacity: 0.32;
+      filter: blur(3.5px);
+    }
+    @media (max-width: 700px) {
+      h1 { font-size: 1.5rem; }
+      .services-grid { gap: 1.2rem; }
+      .service-card { padding: 1.2rem 0.5rem 1.2rem 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Our Cyberpunk Services</h1>
+  <div class="services-grid">
+    <div class="service-card" tabindex="0">
+      <div class="service-icon">
+        <!-- Price Tracking Icon -->
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+          <circle cx="24" cy="24" r="20" stroke="#3b82f6" stroke-width="3" fill="#23243a"/>
+          <path d="M16 28c2 2 6 2 8 0s6-2 8 0" stroke="#a78bfa" stroke-width="2" fill="none"/>
+          <rect x="21" y="14" width="6" height="14" rx="3" fill="#3b82f6" opacity="0.7"/>
+          <rect x="23" y="10" width="2" height="6" rx="1" fill="#a78bfa" opacity="0.7"/>
+        </svg>
+      </div>
+      <div class="service-title">Price Tracking</div>
+      <div class="service-desc">
+        Monitor real-time prices across markets with precision. Never miss a deal as BuyGenix keeps you updated on every shift.
+      </div>
+    </div>
+    <div class="service-card" tabindex="0">
+      <div class="service-icon">
+        <!-- AI Forecasting Icon -->
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+          <ellipse cx="24" cy="24" rx="20" ry="20" stroke="#a78bfa" stroke-width="3" fill="#23243a"/>
+          <path d="M16 32 Q24 16 32 32" stroke="#3b82f6" stroke-width="2.5" fill="none"/>
+          <circle cx="24" cy="24" r="6" fill="#3b82f6" opacity="0.7"/>
+          <circle cx="24" cy="24" r="2" fill="#fff" opacity="0.7"/>
+        </svg>
+      </div>
+      <div class="service-title">AI Forecasting</div>
+      <div class="service-desc">
+        Harness advanced AI to predict trends and market movements. Our algorithms illuminate the path to smarter decisions.
+      </div>
+    </div>
+    <div class="service-card" tabindex="0">
+      <div class="service-icon">
+        <!-- Notifications Icon -->
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+          <ellipse cx="24" cy="28" rx="14" ry="10" fill="#23243a" stroke="#3b82f6" stroke-width="2"/>
+          <rect x="18" y="12" width="12" height="16" rx="6" fill="#a78bfa" opacity="0.3"/>
+          <circle cx="24" cy="14" r="4" fill="#3b82f6" opacity="0.7"/>
+          <rect x="22" y="36" width="4" height="6" rx="2" fill="#a78bfa" opacity="0.7"/>
+        </svg>
+      </div>
+      <div class="service-title">Notifications</div>
+      <div class="service-desc">
+        Receive instant alerts for price changes, forecasts, and opportunities. Stay ahead with timely, actionable notifications.
+      </div>
+    </div>
+    <div class="service-card" tabindex="0">
+      <div class="service-icon">
+        <!-- Dashboard Icon -->
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+          <rect x="8" y="12" width="32" height="24" rx="6" fill="#23243a" stroke="#a78bfa" stroke-width="3"/>
+          <rect x="14" y="18" width="8" height="12" rx="2" fill="#3b82f6" opacity="0.7"/>
+          <rect x="26" y="18" width="8" height="8" rx="2" fill="#a78bfa" opacity="0.7"/>
+          <rect x="26" y="28" width="8" height="2" rx="1" fill="#3b82f6" opacity="0.7"/>
+        </svg>
+      </div>
+      <div class="service-title">Dashboard</div>
+      <div class="service-desc">
+        Visualize your data and insights in a unified, customizable dashboard. Command your BuyGenix experience with clarity.
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+        }
+</head>
+<body>
+
+</body>
+</html>
