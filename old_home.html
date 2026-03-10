@@ -1,0 +1,92 @@
+<! DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BuyGenix</title>
+    
+        <! -- Tailwind CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Custom Tailwind config-->
+         <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            bgDark: "#0b0f1a",
+                            accent: "#00f5d4"
+                        }
+                    }
+                }
+            }
+         </script>
+         </head>
+
+         <body class="bg-bgDark text-white min-h-screen overflow-hidden">
+
+            <!-- Background graph-->
+            <div class="absolute inset-0 opacity-15 pointer-events-none">
+                <svg viewBox="0 0 800 400" class="w-full h-full">
+                    <path
+                        d="M0 300 L100 260 L200 280 L300 200 L400 220 L500 150 L600 170 L700 120 L800 140"
+                        fill="none"
+                        stroke="#00f5d4"
+                        stroke-width="2"
+                    />
+                </svg>
+            </div>
+
+            <! -- Navbar -->
+            <nav class="relative z-10 flex justify-between items-center px-10 py-6">
+                <h1 class="text-x1 font-semibold tracking-wide">BuyGenix</h1>
+                <button class="border border-accent px-4 py-2 rounded-md text-accent hover:bg-accent hover:text-black transition">
+                    Sign In
+                </button>
+            </nav>
+
+            <! -- Hero Section -->
+            <main class="relative z-10 flex flex-col itmes-center justify-center text-center h-[75vh] px-4">
+                <! -- Identify symbol -->
+                <div class="mb-6">
+                    <svg width="120" height="60" viewBox="0 0 120 60">
+                        <path
+                            d="M10 30 C 20 10, 60 30 C 80 50, 100 50, 110 30"
+                            fill="none"
+                            stroke="#00f5d4"
+                            strok-width="3"
+                        />
+                    </svg>
+                </div>
+        
+                <!-- Headline -->
+                <h2 class="text-5xl font-bold tracking-tight">
+                    BUY <span class="text-accent">SMART</span>
+                </h2>
+
+                <!-- Subtext-->
+                 <p class="mt-4 text-grey-400 max-w-xl">
+                    Compare prices across platforms instatnly
+                
+                 </p>
+
+                 <!--Search Bar-->
+                  <div class="mt-8 flex w-full max-w-lg">
+                    <input
+                        type="text"
+                        placeholder="Search a product to compare"
+                        class="flex-1 px-4 py-3 rounded-l-md bg-gray-900 border border-gray-700 focus:outline-none focus:border-accent"
+                    />
+                    <button
+                       class="px-6 py-3 bg-accent text-black font-semibold rounded-r-md hover:opacity-90 transition"
+                    >
+                    Compare
+                    </button>
+                    </div>ye 
+
+            </main>
+         </body>
+
+    </title>
+    </head>
+</html>
